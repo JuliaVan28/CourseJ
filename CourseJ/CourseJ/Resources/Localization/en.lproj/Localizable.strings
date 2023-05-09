@@ -1,0 +1,100 @@
+// MARK: Common
+
+"course" = "Course";
+
+// MARK: Onboarding
+
+"onboarding.1" = "Free courses for you to find your way to learning";
+"onboarding.2" = "Easy and fast learning at any time to help you improve various skills";
+"onboarding.3" = "Study according to the study plan, make studying more motivated";
+"onboarding.login" = "Log In";
+
+// MARK: Appearance
+
+"appearance.mode" = "Appearance Mode";
+"appearance.system" = "System";
+"appearance.light" = "Light";
+"appearance.dark" = "Dark";
+
+// MARK: TabItem
+
+"tab.item.title.home" = "Home";
+"tab.item.title.courses" = "Courses";
+"tab.item.title.myCourses" = "My Courses";
+"tab.item.title.account" = "Account";
+
+// MARK: Home
+
+"home.recent" = "Recent Courses";
+"home.letsStart" = "Lets start learning";
+"home.hello %@" = "Hello %@";
+
+// MARK: MyCourses
+
+"mycourses.nocourses" = "You don't have any products yet!";
+"mycourses.learned" = "Learned today";
+"mycourses.min %lld" = "%lld min";
+"mycourses.accessibility.of" = "of";
+"mycourses.completed" = "Completed";
+
+// MARK: Courses
+
+"courses.choose.course" = "Choose your course";
+"courses.category.all" = "All";
+"courses.category.popular" = "Popular";
+"courses.category.new" = "New";
+
+// MARK: Course Categories
+"course.category.design" = "Design";
+"course.category.painting" = "Painting";
+"course.category.coding" = "Coding";
+"course.category.music" = "Music";
+"course.category.visualidentity" = "Visual Identity";
+"course.category.mathematics" = "Mathematics";
+"course.category.unknown" = "Unknown Category";
+
+// MARK: Account
+
+"account.favourite" = "Favourite";
+"account.edit" = "Edit Account";
+"account.settings.privacy" = "Settings and Privacy";
+"account.help" = "Help";
+
+// MARK: Filter
+
+"couses.filter.search" = "Search Filter";
+"couses.filter.categories" = "Categories";
+"couses.filter.duration" = "Duration";
+"couses.filter.clear" = "Clear";
+"couses.filter.apply" = "Apply Filter";
+
+// MARK: Card
+
+"%lld card.hours" = "%lld hours";
+
+// MARK: - Login
+
+"login.name" = "Your NickName";
+"login.email" = "Your Email";
+"login.title" = "Log In";
+
+// MARK: Quiz
+
+"quiz.button.continue" = "Continue";
+"quiz.button.done" = "Done";
+"quiz.button.submit" = "Submit";
+"quiz.content.list %@" = "%@ list of content";
+"quiz.singlechoice.task" = "Select an answer";
+"quiz.multiplechoice.task" = "Select multiple answers";
+"quiz.writedown.task" = "Enter an answer";
+"quiz.explanation" = "Explanation";
+
+"quiz.stats.congratulations" = "Congratulations";
+"quiz.stats.youfinished" = "You've finished the course";
+"quiz.stats.yourresults" = "Your result";
+"quiz.stats.correctanswers" = "Correct answers";
+"quiz.stats.button.resume" = "Resume Course";
+"quiz.stats.button.complete" = "Complete Course";
+"quiz.stats.button.restart" = "Restart Course";
+
+
