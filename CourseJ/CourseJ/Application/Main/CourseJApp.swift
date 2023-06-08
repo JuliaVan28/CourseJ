@@ -1,10 +1,3 @@
-//
-//  CourseJApp.swift
-//  CourseJ
-//
-//  Created by Julia Vanchytska on 05.05.2023.
-//
-
 import SwiftUI
 
 @main
@@ -16,13 +9,14 @@ struct CourseJApp: App {
 
     var body: some Scene {
         WindowGroup {
-            TabBarView()
+            TabBarView(persistenceController: persistenceController)
                 .fullScreenCover(isPresented: $shouldShowOnboarding) {
                     OnboardingView(shouldShowOnboarding: $shouldShowOnboarding)
-                        .preferredColorScheme(.light)
+                        .preferredColorScheme(.dark)
                 }
                 .environmentObject(theme)
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(DataController.shared)
+                .environment(\.managedObjectContext, PersistenceController.context)
         }
     }
 }

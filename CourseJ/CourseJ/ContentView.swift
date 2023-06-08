@@ -1,25 +1,21 @@
-//
-//  ContentView.swift
-//  CourseJ
-//
-//  Created by Julia Vanchytska on 05.05.2023.
-//
 
+/*
 import SwiftUI
 import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
-    @FetchRequest(
+   /* @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
         animation: .default)
-    private var items: FetchedResults<Item>
+    */
+   // private var items: FetchedResults<Item>
 
     var body: some View {
         NavigationView {
-            List {
-                ForEach(items) { item in
+            /*List {
+               ForEach(items) { item in
                     NavigationLink {
                         Text("Item at \(item.timestamp!, formatter: itemFormatter)")
                     } label: {
@@ -33,15 +29,16 @@ struct ContentView: View {
                     EditButton()
                 }
                 ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                 //   Button(action: addItem) {
+                 //       Label("Add Item", systemImage: "plus")
                     }
                 }
             }
             Text("Select an item")
+             */
         }
     }
-
+/*
     private func addItem() {
         withAnimation {
             let newItem = Item(context: viewContext)
@@ -72,6 +69,7 @@ struct ContentView: View {
             }
         }
     }
+ */
 }
 
 private let itemFormatter: DateFormatter = {
@@ -86,3 +84,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
+*/

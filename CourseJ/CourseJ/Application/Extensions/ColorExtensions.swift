@@ -11,7 +11,25 @@ extension Color {
     }
 
     enum Login {
-    //    static let textColor = Color("LoginText")
+        static let textColor = Color("LoginText")
+    }
+    
+    enum Filter {
+        static let buttonColor = Color("FilterButtonColor")
+        static let buttonTextColor = Color("FilterButtonTextColor")
+    }
+    
+    enum Progress {
+        static let progressTrackColor = Color("ProgressTrack")
+        static let progressOrangeColor = Color("ProgressOrange")
+    }
+    
+    enum ChoiceQuiz {
+        static let outerCircleButtonColor = Color("RadioButtonColor")
+        static let innerCircleButtonColor = Color("RadioButtonInnerCircleColor")
+        static let selectedRadioButtonColor = Color("RadioButtonSelectedColor")
+        static let correctColor = Color("CorrectGreen")
+        static let incorrectColor = Color("IncorrectRed")
     }
 
 }
