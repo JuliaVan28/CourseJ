@@ -77,6 +77,7 @@
 		A36CA58E2A30C202004968F3 /* TextFieldWithClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36CA58D2A30C202004968F3 /* TextFieldWithClearButton.swift */; };
 		A36CA5902A30C740004968F3 /* CollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36CA58F2A30C740004968F3 /* CollectionExtension.swift */; };
 		A36CA5922A3268FE004968F3 /* AccessibleLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36CA5912A3268FE004968F3 /* AccessibleLayoutView.swift */; };
+		A36CA5942A34E63E004968F3 /* FilterRoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36CA5932A34E63D004968F3 /* FilterRoller.swift */; };
 		A3F70FD12A05374300B9C66A /* CourseJApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F70FD02A05374300B9C66A /* CourseJApp.swift */; };
 		A3F70FD32A05374300B9C66A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F70FD22A05374300B9C66A /* ContentView.swift */; };
 		A3F70FD52A05374500B9C66A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3F70FD42A05374500B9C66A /* Assets.xcassets */; };
@@ -209,6 +210,7 @@
 		A36CA58D2A30C202004968F3 /* TextFieldWithClearButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldWithClearButton.swift; sourceTree = "<group>"; };
 		A36CA58F2A30C740004968F3 /* CollectionExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionExtension.swift; sourceTree = "<group>"; };
 		A36CA5912A3268FE004968F3 /* AccessibleLayoutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessibleLayoutView.swift; sourceTree = "<group>"; };
+		A36CA5932A34E63D004968F3 /* FilterRoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterRoller.swift; sourceTree = "<group>"; };
 		A3F70FCD2A05374300B9C66A /* CourseJ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CourseJ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3F70FD02A05374300B9C66A /* CourseJApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseJApp.swift; sourceTree = "<group>"; };
 		A3F70FD22A05374300B9C66A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -710,6 +712,7 @@
 		A3F710502A0946E700B9C66A /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A36CA5932A34E63D004968F3 /* FilterRoller.swift */,
 				A36CA5622A30BBA0004968F3 /* Fields */,
 				A36CA5592A30A9B7004968F3 /* CourseCard.swift */,
 				A3F710532A09473700B9C66A /* Buttons */,
@@ -917,6 +920,7 @@
 				A3F710472A09436300B9C66A /* AnimationExtensions.swift in Sources */,
 				A36CA51D2A1EA74E004968F3 /* Answer+CoreDataProperties.swift in Sources */,
 				A36CA5902A30C740004968F3 /* CollectionExtension.swift in Sources */,
+				A36CA5942A34E63E004968F3 /* FilterRoller.swift in Sources */,
 				A36CA5852A30C052004968F3 /* ArticleImage.swift in Sources */,
 				A36CA51C2A1EA74E004968F3 /* Answer+CoreDataClass.swift in Sources */,
 				A36CA5672A30BBB7004968F3 /* SearchTextFieldView.swift in Sources */,

@@ -37,7 +37,7 @@ private struct CourseDetails: View {
             Label(course.wrappedAuthor, systemImage: "person.fill")
                 .font(.poppinsFootnote)
                 .foregroundColor(.secondaryColor)
-            Text("Duration: \(course.duration) hours")
+            Text("Rating: \(course.rating)/5")
                 .font(.poppinsCaption2)
                 .foregroundColor(Color.Progress.progressOrangeColor)
         }

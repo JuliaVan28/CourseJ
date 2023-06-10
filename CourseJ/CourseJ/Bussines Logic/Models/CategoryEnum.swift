@@ -8,7 +8,9 @@
 import Foundation
 import SwiftUI
 
-enum CategoryEnum: Int, CaseIterable {
+enum CategoryEnum: Int, CaseIterable, Identifiable {
+    var id: Int { rawValue }
+    
     case design
     case painting
     case coding
@@ -34,6 +36,16 @@ extension CategoryEnum {
         case .coding: return "course.category.coding".localized
         case .language: return "course.category.language".localized
         case .unknown: return "course.category.unknown".localized
+        }
+    }
+    
+    var image: Image {
+        switch self {
+        case .design: return Image("designRec")
+        case .painting: return Image("paintingRec")
+        case .coding: return Image("codingRec")
+        case .language: return Image("languageRec")
+        case .unknown: return Image("unknownRec")
         }
     }
 }

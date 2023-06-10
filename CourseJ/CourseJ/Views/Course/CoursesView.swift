@@ -9,25 +9,30 @@ struct CoursesView: View {
 
     @State private var isQuizPresented = false
     @State private var preselectedCategory = Self.CoursesCategoryItem.all
+    @State private var filter = CategoryEnum.unknown
+    @State private var courseList: [Course] = []
+
+
     @State private var text = ""
     @State private var isPresented = false
-    @State private var oldFilters: [Course] = []
-    @State private var courseList: [Course] = []
-    @State private var selectedFilters: [Course] = []
-
+    
     var body: some View {
         NavigationStack {
             ScrollViewReader { proxy in
                 ScrollView {
                     VStack(alignment: .leading) {
                         SearchFieldView(textField: $text, showSheet: $isPresented, scrollProxy: proxy)
-                        HorizontalRollerView(adItems: MockData.adImages)
+                        FilterRollerView(filter: $filter) {
+                            courseList = filteredCourses
+                        }
                         Text("courses.choose.course".localized)
                             .font(.poppinsTitle3)
                             .fontWeight(.medium)
                             .padding(EdgeInsets(top: 24, leading: 20, bottom: 0, trailing: 0))
-                        SegmentedControl(preselectedId: $preselectedCategory)
-                        ForEach(courses, id: \.self) { course in
+                        SegmentedControl(preselectedId: $preselectedCategory) {
+                            courseList = sortedCourses
+                        }
+                        ForEach(courseList, id: \.self) { course in
                             Button {
                                 isQuizPresented = true
                                 dataController.selectedCourse = course
@@ -43,6 +48,7 @@ struct CoursesView: View {
             .navigationTitle(TabBarItemScreen.courses.displayName)
             .backgroundColorStyle()
         }
+        .onAppear(perform: initializeCourseList)
         .fullScreenCover(isPresented: $isQuizPresented) {
         QuizView(isPresented: $isQuizPresented, course: dataController.selectedCourse!)
                 .preferredColorScheme(theme.colorScheme)
@@ -68,6 +74,38 @@ extension CoursesView {
             case .new: return "courses.category.new".localized
             case .name: return "courses.category.name".localized
             }
+        }
+    }
+    
+    private func initializeCourseList() {
+            courseList = Array(courses)
+        }
+    
+    private var sortedCourses: [Course] {
+            switch preselectedCategory {
+            case .all:
+                return Array(courses)
+            case .popular:
+                return Array(courses.sorted { $0.rating > $1.rating })
+            case .new:
+                return Array(courses.sorted { $0.createdAt ?? Date() > $1.createdAt ?? Date() })
+            case .name:
+                return Array(courses.sorted { $0.wrappedTitle < $1.wrappedTitle })
+            }
+        }
+    
+    private var filteredCourses: [Course] {
+        switch filter {
+        case .unknown:
+            return Array(courses)
+        case .language:
+            return Array(courses.filter({$0.wrappedCategory.category == .language}))
+        case .painting:
+            return Array(courses.filter({$0.wrappedCategory.category == .painting}))
+        case .coding:
+            return Array(courses.filter({$0.wrappedCategory.category == .coding}))
+        case .design:
+            return Array(courses.filter({$0.wrappedCategory.category == .design}))
         }
     }
 }

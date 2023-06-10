@@ -87,7 +87,9 @@ extension ChoiceModulesController {
     }
 
     func setSingleExplanationAnswer(for moduleItem: CourseModule) {
-        config.selectedOption = moduleItem.wrappedAnswers.first(where: {$0.isCorrect == true })!.wrappedAnswer
+        if let selectedAnswer = moduleItem.wrappedAnswers.first(where: {$0.isCorrect == true })?.wrappedAnswer {
+            config.selectedOption = selectedAnswer
+        }
     }
 }
 

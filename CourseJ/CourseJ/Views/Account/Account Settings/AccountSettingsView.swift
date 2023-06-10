@@ -4,8 +4,8 @@ import Auth0
 struct AccountSettingsView: View {
     @Binding var shouldShowOnboarding: Bool
     
-    @State private var username: String = "Julia"
-    @State private var email: String = "julia.van@i.ua"
+    @State private var username: String = ""
+    @State private var email: String = ""
     
     
     var body: some View {

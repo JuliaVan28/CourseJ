@@ -2,6 +2,8 @@ import SwiftUI
 
 struct SegmentedControl: View {
     @Binding var preselectedId: CoursesView.CoursesCategoryItem
+    let setSortedList: () -> Void
+    
     private func foregroundColor(for category: CoursesView.CoursesCategoryItem) -> Color {
         preselectedId.id == category.id ? .white : .Filter.buttonTextColor
     }
@@ -16,6 +18,7 @@ struct SegmentedControl: View {
                 ForEach(CoursesView.CoursesCategoryItem.allCases) { category in
                     Button {
                         preselectedId = category
+                        setSortedList()
                     } label: {
                         Text(category.displayName)
                     }
@@ -37,6 +40,6 @@ struct SegmentedControl: View {
 
 struct SegmentedController_Previews: PreviewProvider {
     static var previews: some View {
-        SegmentedControl(preselectedId: .constant(CoursesView.CoursesCategoryItem.all)).previewLayout(.sizeThatFits)
+        SegmentedControl(preselectedId: .constant(CoursesView.CoursesCategoryItem.all), setSortedList: {}).previewLayout(.sizeThatFits)
     }
 }

@@ -19,7 +19,7 @@ struct TabBarView: View {
                     case .home: HomeView()
                             .onAppear(perform: dataController.loadDataBase)
                     case .courses: CoursesView()
-                    case .myCourses: HomeView() //MyCoursesView()
+                    case .myCourses: MyCoursesView()
                     case .account: AccountView()
                     }
                 }

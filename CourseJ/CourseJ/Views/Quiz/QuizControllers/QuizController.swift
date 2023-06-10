@@ -9,12 +9,10 @@ final class TemporaryCoursesPersistentStore: ObservableObject {
     @Published var selectedCourse: Course?
 
     private init() {
-        //_courses = Published(initialValue: dataController.courses)
-       // _ = initializeCourses
-       // guard courses.isNotEmpty else { fatalError("There should be at least one course") }
-         _courses = Published(initialValue: users.map{$0.usersCoursesArray}.first!)
-        //_courses = Published(initialValue: dataController.courses)
-        _selectedCourse = Published(initialValue: courses.first!)
+        if let userCourses = users.map({$0.usersCoursesArray}).first {
+            _courses = Published(initialValue: userCourses)
+            _selectedCourse = Published(initialValue: courses.first!)
+        }        
     }
 
     static var shared = TemporaryCoursesPersistentStore()
@@ -35,8 +33,6 @@ final class TemporaryCoursesPersistentStore: ObservableObject {
     func getModule(for moduleItem: CourseModule) -> CourseModule? {
         selectedCourse?.modulesArray.first { $0 == moduleItem }
     }
-
-    //var favoriteCourses: [Course] { courses.filter(\.isFavorite) }
 }
 
 final class QuizController: ObservableObject {
@@ -46,7 +42,6 @@ final class QuizController: ObservableObject {
 
     init(course: Course) {
         self.course = course
-       // self.course.isFavorite = true
     }
 
     func saveSelectedAnswers(answers: [Answer], for moduleItem: CourseModule) {
