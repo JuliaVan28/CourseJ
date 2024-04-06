@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "ads-unknown.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
